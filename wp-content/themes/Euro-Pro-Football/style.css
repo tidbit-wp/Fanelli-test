@@ -1,0 +1,4090 @@
+/*  
+Theme Name: Euro Pro
+Version: 1.0
+Author: Tidbit
+Author URI: https://tidbitsolution.com/
+
+*/
+
+
+/************************** Adding Custom Fonts ****************************/
+
+@font-face {
+	font-family: 'Briem-Script';
+	src: url(/wp-content/themes/Euro-Pro-Football/fonts/Briem-Script-Std.ttf);
+}
+@font-face {
+	font-family: 'Gotham-light';
+	src: url(/wp-content/themes/Euro-Pro-Football/fonts/GothamLight.ttf);
+}
+
+@font-face {
+	font-family: 'Gotham-medium';
+	src: url(/wp-content/themes/Euro-Pro-Football/fonts/GothamMedium.ttf);
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url(/wp-content/themes/Euro-Pro-Football/fonts/HomepageBaukasten-Book.ttf);
+}
+
+body {
+	font-family: 'Gotham';
+	overflow-x: hidden;
+}
+.design-text a{
+	color: #FFCE33;
+}
+/* #Primary
+================================================== */
+.container {
+	max-width: 1562px;
+}
+
+::selection {
+	color: #07153E;
+	background-color: #FFCE33;
+}
+
+::-moz-selection {
+	color: #07153E;
+	background-color: #FFCE33;
+}
+
+
+/* #Navigation
+================================================== */
+
+.trail-book.nav-item:hover:after{
+	height: 0 !important;
+}
+.start-header {
+	opacity: 1;
+	transform: translateY(0);
+	padding: 20px 0;
+	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.start-header.scroll-on {
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.start-header.scroll-on .navbar-brand img {
+	height: 24px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navigation-wrap {
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	background-color: #07153E;
+	height: 172px;
+	display: flex;
+	align-items: center;
+}
+
+.navbar {
+	padding: 0;
+}
+
+.navbar-brand img {
+	height: 28px;
+	width: auto;
+	display: block;
+	filter: brightness(10%);
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navbar-toggler {
+	float: right;
+	border: none;
+	padding-right: 0;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+	outline: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+	width: 24px;
+	height: 17px;
+	background-image: none;
+	position: relative;
+	border-bottom: 1px solid #000;
+	transition: all 300ms linear;
+}
+
+.navbar-light .navbar-toggler-icon:after,
+.navbar-light .navbar-toggler-icon:before {
+	width: 24px;
+	position: absolute;
+	height: 1px;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+	transition: all 300ms linear;
+}
+
+.navbar-light .navbar-toggler-icon:after {
+	top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+
+.nav-link {
+	color: #fff !important;
+	font-weight: 700;
+	transition: all 200ms linear;
+	font-size: 1.5rem;
+}
+
+.nav-item:hover .nav-link {
+	color: #fff !important;
+}
+
+.nav-item.active .nav-link {
+	color: #fff !important;
+}
+
+.trail-book a.nav-link {
+	background-color: #FFCE33;
+	color: #07153E !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+.trail-book:hover a.nav-link{
+	color: #fff !important;
+	background-color: transparent;
+	/* border: 1px solid #FFCE33; */
+	padding: 5px 20px !important;
+}
+.trail-book:hover a.nav-link:after{
+	border: none;
+}
+
+.nav-link {
+	position: relative;
+	padding: 5px 20px !important;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.nav-item:after {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	background-color: #FFCE33;
+	opacity: 0;
+	transition: all 200ms linear;
+}
+
+.nav-item:hover:after {
+	bottom: 0;
+	opacity: 1;
+}
+
+.nav-item.active:hover:after {
+	opacity: 0;
+}
+
+.nav-item {
+	position: relative;
+	transition: all 200ms linear;
+}
+
+
+/* .nav-item .dropdown-menu {
+	transform: translate3d(0, 10px, 0);
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	display: block;
+	padding: 0;
+	margin: 0;
+	transition: all 200ms linear;
+} */
+
+.nav-item.show .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	max-height: 999px;
+	transform: translate3d(0, 0px, 0);
+}
+
+.dropdown-menu {
+	padding: 0px !important;
+	margin: 0;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #212121;
+	background-color: #fcfaff;
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	transition: all 200ms linear;
+	border-left: 4px solid #07153E;
+	border-right: 4px solid #07153E;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.dropdown-item {
+	padding: 3px 15px;
+	color: #212121;
+	border-radius: 2px;
+	transition: all 200ms linear;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+	color: #07153E;
+	background-color: #FFCE33;
+}
+a.dropdown-item:hover:after{
+	left: 85%;
+    top: 26px;
+    width: 10px;
+    height: 25px;
+    border: solid #07153E;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(
+45deg
+);
+    -ms-transform: rotate(45deg);
+    transform: rotate(
+45deg
+);
+    position: absolute;
+	content: '';
+}
+
+.page-home .custom-logo-link {
+	position: relative;
+	height: 265px;
+	width: 256px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #07153E;
+	top: 45px;
+}
+
+.page-home .custom-logo-link .custom-logo {
+	height: 202px;
+	width: 168px;
+}
+
+.custom-logo-link .custom-logo {
+	height: 141px;
+	width: 117px;
+}
+
+
+
+/************************************* Home Page **************************************/
+
+
+.blur-background {}
+
+.hero-section {
+	/* background-image: url(https://wordpress-426808-1993275.cloudwaysapps.com/wp-content/uploads/2021/06/bmYqBKvg.png); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 65vw;
+	position: relative;
+}
+
+.blur-background {
+	max-width: 1093px;
+}
+.journey-text h2{
+	font-size: 3.125rem;
+	font-weight: bold;
+	color: #07153E;
+}
+.main-uppercase{
+	font-weight: bold;
+	padding-bottom: 3rem;
+}
+.blur-backgrounds {
+	height: 275px;
+	background-color: #07153e66;
+	backdrop-filter: blur(27px);
+	display: flex;
+	align-items: center;
+	padding-left: 50px;
+}
+
+.page-home .pad-left {
+	padding-left: 0 !important;
+}
+/* .page-home .pad-right {
+	padding-right: 0 !important;
+} */
+
+.hero-sub-text {
+	padding-top: 4.063rem;
+}
+
+.blured-text {
+	max-width: 1093px;
+	font-size: 5rem;
+	color: #fff;
+}
+
+.hero-text {
+	font-size: 30px;
+	line-height: 36px;
+	color: #fff;
+	/* padding-left: 1.5rem; */
+}
+.page-home .hero-text p{
+	font-size: 30px;
+	line-height: 36px;
+	color: #fff;
+	/* padding-left: 1.5rem; */
+}
+.page-home .hero-text span{
+	font-size: 30px;
+	line-height: 36px;
+	color: #FFCE33;
+	/* padding-left: 1.5rem; */
+}
+
+.hero-text-normal {
+	font-size: 30px;
+	line-height: 36px;
+	color: #fff;
+	font-family: 'Gotham-light';
+}
+
+.pt-7 {
+	padding-top: 7.813rem;
+}
+
+.pb-8 {
+	padding-bottom: 8.875rem;
+}
+
+.about-text p {
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	color: #07153E;
+}
+
+.about-text {
+	max-width: 1522px;
+	margin: 0 auto;
+}
+
+.img-text h2,
+.img-text p {
+	font-size: 1.25rem !important;
+	line-height: 1.5rem !important;
+	color: #07153E;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.pt-50 {
+	padding-top: 3.125rem;
+}
+
+.img-text {
+	margin: 0 auto;
+	max-width: 1087px;
+	padding-bottom: 50px;
+}
+.contact-submit{
+	padding-top: 6rem;
+}
+.dbs-section {
+	background: #07153E;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	;
+	margin-top: 3.125rem;
+	margin-bottom: 3.125rem;
+}
+
+.journey-section {
+	padding-top: 3.125rem;
+	padding-bottom: 5.625rem;
+}
+
+.journey-img {
+	text-align: center;
+	padding-bottom: 8.813rem;
+}
+
+.dbs-img {
+	max-width: 1275px;
+}
+
+.journey-text {
+	max-width: 1088px;
+	margin: 0 auto;
+	font-size: 1.875rem;
+	line-height: 2.735rem;
+}
+
+.oppertunity {
+	background-color: #07153E;
+}
+
+.oppertunity .container,
+.aspire-section .container,
+footer .container,
+.hero-section .container {
+	max-width: 1700px;
+}
+
+.oppertunity-title h1 {
+	color: #fff;
+	font-size: 3.125rem;
+	padding-top: 7rem;
+	padding-bottom: 2rem;
+	font-weight: bold;
+}
+footer .nav-link{
+	padding: 5px 0px !important;
+}
+.copyright-text{
+	padding-top: 2rem;
+}
+.oppertunity-title span {
+	margin-right: 1.5rem;
+}
+
+.young-footballers h2 {
+	color: #fff;
+	font-size: 5rem;
+	line-height: 5.25rem;
+	padding-bottom: 10rem;
+}
+
+.aspire-title {
+	max-width: 815px;
+	background-color: #07153E;
+}
+
+.aspire-title h2 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 1rem 2rem;
+	color: #fff;
+}
+
+.aspire-title span {
+	margin-right: 1.5rem;
+}
+
+.aspire-section {
+	padding-top: 2rem;
+}
+
+.aspire-level {
+	padding-top: 6rem;
+	padding-bottom: 10.625rem;
+}
+
+.aspire-leve-para p {
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	color: #07153E;
+}
+
+/******************* Footer **********************/
+.footer {
+	background-color: #07153E;
+	padding-top: 5.625rem;
+	padding-bottom: 3.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.social-icons {
+	width: 50px;
+}
+
+.social-links span {
+	margin-right: 1.875rem;
+}
+
+.footer-logo img {
+	width: 117px;
+	margin-top: -45px;
+}
+
+.footer #menu-main-menu-1 li {
+	margin-left: 0 !important;
+}
+
+.design-text,
+.copy-text {
+	font-size: 20px;
+	color: #fff;
+}
+
+/*****************Covid Page*************************/
+.covid-data {
+	padding-top: 1.875rem;
+	color: #07153E;
+}
+
+.covid-data h4,
+.contact-info h4,
+.contact-info a {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 38px;
+}
+
+.covid-data p {
+	font-size: 26px;
+	line-height: 38px;
+}
+
+.contact-info a {
+	color: #07153E;
+	transition: all .5s ease;
+}
+
+.contact-info a:hover {
+	text-decoration: none;
+	color: #FFCE33;
+}
+
+.covid-guidlines {
+	padding-top: 7.938rem;
+	padding-bottom: 7.938rem;
+}
+
+
+/***************Contact Page *****************/
+.contact-title {
+	max-width: 380px;
+	padding: 10px;
+}
+
+.contact-title h1 {
+	color: #fff;
+	font-size: 1.5rem;
+	background-color: #07153E;
+	padding: 20px;
+}
+
+.contact-title span {
+	margin-right: 3.875rem;
+}
+
+.star {
+	height: 26px;
+	width: 26px;
+	margin-top: -7px;
+}
+
+.contact-content p {
+	color: #07153E;
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+}
+
+.contact-page-info a {
+	color: #07153E;
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	transition: all .5s ease;
+	font-weight: 700;
+}
+
+.contact-page-info a:hover {
+	color: #FFCE33;
+	text-decoration: none;
+}
+
+.contact-text {
+	padding-top: 8.5rem;
+	padding-bottom: 10.938rem;
+}
+
+.contact-form {
+	background-color: #F6F6F6;
+	padding-top: 11.25rem;
+	padding-bottom: 6.5rem;
+}
+
+.cform {
+	max-width: 1236px;
+	margin: 0 auto;
+}
+
+.form-control {
+	border-color: #07153E;
+	border-width: 4px;
+	font-size: 1.875rem;
+	padding: 1.563rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 0;
+}
+
+select.form-control {
+	height: auto !important;
+	padding: 1.875rem;
+	border-radius: 0;
+	margin-bottom: 8px;
+}
+
+.wpcf7-email {
+	text-transform: lowercase;
+}
+
+label {
+	font-size: 1.875rem;
+	color: #07153E;
+	font-weight: 700;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	text-transform: uppercase;
+	position: relative;
+}
+
+span.ajax-loader {
+	display: none !important;
+}
+
+.frm-submit {
+	padding-top: 6.875rem;
+}
+
+.btn-submit {
+	background-color: #FFCE33;
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+	font-size: 1.875rem;
+	color: #07153E;
+	font-weight: bolder;
+	text-transform: uppercase;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-radius: 0;
+	transition: all .5s;
+}
+
+.form-row>.col,
+.form-row>[class*=col-] {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.contact-content {
+	padding-top: 5rem;
+}
+
+/*************************About Us Page ******************************/
+.about-title span {
+	margin-right: 1.5rem;
+}
+
+.about-title {
+	max-width: 496px;
+}
+
+.about-title h1 {
+	font-size: 1.875rem;
+}
+
+.pl-custom {
+	padding-left: 2.5rem;
+}
+
+.img-width {
+	width: 100%;
+}
+
+.pt-8 {
+	padding-top: 8.5rem;
+}
+
+.pt-80 {
+	padding-top: 4.563rem;
+}
+
+.font-size-30 {
+	font-size: 1.875rem;
+	color: #07153E;
+	line-height: 36px;
+}
+
+.director-title {
+	max-width: 455px;
+	padding: 0;
+}
+
+.director-title span {
+	margin-right: 0.875rem;
+}
+
+.director-title h1 {
+	font-size: 1.875rem;
+}
+
+.director-profile-img p {
+	font-weight: 700;
+	color: #07153E;
+	font-size: 1.875rem;
+}
+
+.director-name {
+	text-transform: uppercase;
+	padding-top: 1.5rem;
+	margin-bottom: 0;
+}
+
+.director-position {
+	text-transform: capitalize;
+}
+
+.journey-text {}
+
+.director-profile {
+	padding-bottom: 6.25rem;
+}
+.director-profile  p a{
+	color: #07153E;
+}
+
+/******************************** Your Profile Page *****************************/
+.accordion-img-1 {
+	padding-bottom: 7.75rem;
+	padding-top: 2rem;
+}
+
+.after-btn-content {
+	padding-top: 5.75rem;
+}
+
+.accordion-main-content,
+a.card-title {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	color: #07153E;
+	font-weight: 700;
+}
+
+.card-body p , .card-body ul {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	color: #07153E;
+}
+
+.book-cost-btn {
+	padding-top: 7rem;
+}
+
+.accordion-main-content {
+	padding-top: 3rem;
+}
+
+.profile-hero-text p {
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+}
+
+.profile-hero-text {
+	padding-top: 0rem;
+	/* padding-bottom: 2rem;
+	padding-right: 2rem;
+	padding-left: 2rem; */
+}
+
+.profile-page-title {
+	background-color: #07153E;
+	max-width: 721px;
+	
+	margin-right: 2rem;
+}
+
+.profile-page-title h1 {
+	color: #fff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 15px;
+}
+
+.profile-page-title span {
+	margin-right: .5rem;
+}
+
+.profile-page-section {
+	padding-bottom: 9.063rem;
+}
+
+/****************************** Clubs Says Page *********************************/
+
+.club-page-title {
+	background-color: #07153E;
+	max-width: 390px;
+}
+
+.club-page-title h1 {
+	color: #fff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 15px;
+}
+
+.club-page-title span {
+	margin-right: .5rem;
+}
+
+.created-text {
+	padding-top: 6.25rem;
+	padding-bottom: 5rem;
+}
+
+/****************************** Create Profile Page ****************************/
+.mb-neg{
+	margin-bottom: -13px;
+}
+.top-space {
+    padding-top: 3.375rem;
+}
+.page-create-profile .form-group{
+	margin-bottom: 0;
+}
+.profile-title {
+	max-width: 514px;
+}
+
+.profile-title span {
+	margin-right: .5rem;
+}
+
+.form-control:focus {
+	border-color: #07153E;
+	z-index: 99;
+	box-shadow: none;
+}
+
+.checkbox-btns {
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.medical-information {
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+
+	background-color: #eee;
+
+}
+
+.checkmarks {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+
+	background-color: #eee;
+
+}
+
+.medical-information .checkmarks {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+
+	background-color: #eee;
+
+}
+
+.radio-btns input[type="radio"i] {
+	display: none;
+}
+
+.checkbox-btns input[type="checkbox"i] {
+	display: none;
+}
+
+.medical-information input[type="radio"i] {
+	display: none;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-btns input[type="radio"]~.checkmark {
+	background-color: transparent;
+}
+
+.checkbox-btns input[type="checkbox"]~.checkmarks {
+	background-color: transparent;
+}
+
+.medical-information input[type="radio"]~.checkmark {
+	background-color: transparent;
+}
+
+
+
+/* When the radio button is checked, add a blue background */
+.radio-btns input[type="radio"]:checked~.checkmark {
+	background-color: #FFCE33;
+}
+
+.medical-information input[type="radio"]:checked~.checkmark {
+	background-color: #FFCE33;
+}
+
+.checkbox-btns input[type=checkbox]:checked~.checkmarks {
+	background-color: #FFCE33;
+}
+
+.checkmark:after {
+	left: 90%;
+    top: 26px;
+    width: 12px;
+    height: 32px;
+    border: solid #07153E;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(
+45deg
+);
+    -ms-transform: rotate(45deg);
+    transform: rotate(
+45deg
+);
+    position: absolute;
+}
+
+.checkmarks:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+
+}
+
+/* Show the indicator (dot/circle) when checked */
+/* .radio-btns input:checked ~ .checkmark:after {
+	display: block;
+  } */
+/* .checkbox-btns input:checked ~ .checkmarks:after {
+	display: block;
+  } */
+.radio-text {
+	/* width: 26.313rem; */
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	line-height: 1;
+	text-align: left;
+	border-radius: 0%;
+	font-size: 1.875rem;
+	left: 2.5rem;
+	top: 80%;
+	cursor: pointer;
+}
+
+.checkmark {
+	border-color: #07153E;
+	border-width: 4px;
+	font-size: 1.875rem;
+	padding: 1.563rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 50px;
+	border: 4px solid;
+	width: 100%;
+}
+
+.checkmarks {
+	border-color: #07153E;
+	border-width: 4px;
+	font-size: 1.875rem;
+	padding: 1.563rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 0px;
+	border: 4px solid;
+	width: 100.6%;
+	cursor: pointer;
+}
+
+.medical-information .checkmark {
+	border-color: #07153E;
+	border-width: 4px;
+	font-size: 1.875rem;
+	padding: 1.563rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 0px;
+	border: 4px solid;
+	width: 100.6%;
+}
+
+.checkbox-btns label {
+	height: 90px;
+	width: 100%;
+}
+
+.league {
+	margin-bottom: 0;
+	width: 100.5%;
+}
+
+.pl-0 {
+	padding-left: 0;
+}
+
+.pr-0 {
+	padding-right: 0;
+}
+
+.league-name {
+	position: relative;
+	top: 1.5rem;
+}
+
+.league-name .form-group {
+	margin-bottom: -10px;
+}
+
+.league-name p {
+	margin-bottom: 0;
+}
+
+.radio-btns label {
+	font-size: 1.875rem;
+	color: #07153E;
+	font-weight: 700;
+	padding-top: 2.5rem;
+	padding-bottom: 1.25rem;
+	text-transform: uppercase;
+	position: relative;
+	width: 90%;
+	margin-bottom: 1.875rem;
+}
+
+.kit-size {
+	padding-bottom:2rem;
+}
+
+.parent-information {
+	background-color: #F6F6F6;
+	padding-top: 3.5rem;
+	padding-bottom: 6rem;
+}
+
+.parent-title {
+	max-width: 621px;
+}
+.medical-title{
+	max-width: 536px;
+}
+
+.pname {
+	width: 50%;
+}
+
+.medical-information {
+	padding-top: 5.5rem;
+	padding-bottom: 5.43rem;
+}
+
+.medical-information label {
+	width: 100.1%;
+}
+
+.mtreat {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.medical-information .form-check {
+	padding-left: 10px;
+	padding-right: 5px;
+	position: relative;
+	top: 10px;
+}
+
+.allergie-height {
+	height: 151px;
+}
+
+.allergie {
+	position: relative;
+	top: 37px;
+}
+
+.pl-pr {
+	padding-right: 5px;
+	padding-left: 10px;
+}
+
+/******************************* Trials Page ***********************************/
+.trials-section {
+	padding-top: 8.563rem;
+
+}
+
+.trials-title {
+	background-color: #07153E;
+	max-width: 467px;
+
+}
+
+.trials-title h1 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 10px;
+	color: #fff;
+}
+
+.trials-title span {
+	margin-left: 1.5rem;
+	margin-right: 1rem;
+}
+
+.trials-hero {
+	/* background-image: url('/wp-content/uploads/2021/06/shutterstock_1392916520.png'); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	 padding-top: 4.063rem;
+	padding-bottom: 4.063rem;
+}
+
+.hero-text p {
+	color: #07153E;
+	font-size: 1.875rem;
+}
+
+.step-section {
+	padding-top: 5.688rem;
+	padding-bottom: 5.813rem;
+	background-color: #F6F6F6;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.step-discussion p {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding-bottom: 2.5rem;
+	color: #07153E;
+}
+
+.premier-league p {
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+	padding-bottom: 3.625rem;
+}
+
+.league-matches p {
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+	font-weight: 700;
+	margin-top: 3.25rem;
+}
+
+.accordion .card-header:after {
+	font-family: 'FontAwesome';
+	content: "\f068";
+	float: right;
+}
+
+.accordion .card-header.collapsed:after {
+	/* symbol for "collapsed" panels */
+	content: "\f067";
+}
+
+.accordian-section {
+	max-width: 1125px;
+	margin: 0 auto;
+	padding-top: 6.25rem;
+	padding-bottom: 8rem;
+}
+
+.card {
+	border-radius: 0;
+	/* border:2px solid #07153E; */
+}
+
+
+.card-header:first-child {
+	border-radius: 0 !important;
+	border-top: 4px solid #07153E;
+}
+
+.card-body:last-child {
+	border-radius: 0 !important;
+	border-bottom: 4px solid #07153E;
+}
+
+.card-header {
+	border-radius: 0;
+	border-bottom: 4px solid #07153E;
+	cursor: pointer;
+	border-radius: 0 !important;
+	border-left: 4px solid #07153E;
+	border-right: 4px solid #07153E;
+	font-size: 1.875rem;
+}
+
+.card-body {
+	border-left: 4px solid rgb(7, 21, 62);
+	border-right: 4px solid rgb(7, 21, 62);
+}
+
+.btn-cost {
+	background-color: #07153E;
+	color: #FFCE33;
+	font-size: 1.875rem;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-radius: 0;
+	font-weight: bolder;
+	transition: all .5s;
+	padding-left: 3.4rem;
+	padding-right: 3.4rem;
+	margin-bottom: 0;
+}
+
+/* .btn-cost:hover {
+	background-color: #FFCE33;
+	color: #07153E;
+	
+} */
+
+.btn-submit:hover {
+	background-color: #07153E;
+	color: #FFCE33 !important;
+	/* border: 4px solid #FFCE33; */
+}
+
+footer .nav-item:after {
+	height: 0;
+}
+
+footer .nav-item:hover a.nav-link {
+	color: #FFCE33 !important;
+}
+
+.cost-btns {
+	max-width: 1125px;
+	margin: 0 auto;
+
+}
+
+.professional-container {
+	max-width: 1125px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.recommended h2 {
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	font-weight: 700;
+	font-family: 'Gotham-medium';
+	color: #07153E;
+}
+
+.recommended p {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	color: #07153E;
+}
+
+.recommended {
+	padding-bottom: 3.125rem;
+}
+
+.can-do {
+	padding-bottom: 6.25rem;
+}
+
+.graph-container {
+	max-width: 1125px;
+	margin: 0 auto;
+}
+
+.trial-graph {
+	background-color: #F6F6F6;
+	padding-bottom: 5.313rem;
+}
+
+.graph-text p {
+	font-size: 20px;
+	line-height: 24px;
+	color: #07153E;
+}
+
+.graph-text {
+	margin: 0 auto;
+	max-width: 60%;
+}
+
+.professional-section {
+	padding-top: 6.25rem;
+}
+
+/***************************************************** What Clubs Say Page *********************************************/
+
+.club-page-title h1 {
+	color: #fff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+
+.club-page-title {
+	background-color: #07153E;
+	max-width: 390px;
+}
+
+.club-page-title h1 span {
+	margin-right: .5rem;
+}
+
+.created-text p {
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	color: #07153E;
+}
+
+.what-clubs-title h1 {
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	color: #fff;
+	padding-top: 8rem;
+	padding-bottom: 2.563rem;
+}
+
+.clubs-says-what h2 {
+	color: #fff;
+	font-size: 4rem;
+	line-height: 4.25rem;
+	padding-bottom: 10rem;
+}
+
+/********************** Book a trial Page *************************/
+.book-a-trial {
+	padding-top: 8.688rem;
+}
+
+.book-trial-title {
+	background-color: #07153E;
+	max-width: 384px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.cost-trial-title {
+	background-color: #07153E;
+	max-width: 447px;
+	display: inline-block;
+}
+
+.book-trial-title h1 {
+	color: #fff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 15px;
+}
+
+.cost-trial-title h1 {
+	color: #FFCE33;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 15px;
+}
+
+.cost-trial-title span,
+.book-trial-title span {
+	margin-right: .5rem;
+}
+.page-book-a-trial .radio-btns .form-group{
+	margin-bottom: 0;
+}
+.page-book-a-trial .radio-btns .checkmark{
+	border-radius: 0;
+	height: 140px;
+}
+.page-book-a-trial .radio-btns {
+	padding-bottom: 3rem;
+}
+.page-book-a-trial label p {
+	text-transform: lowercase;
+	font-weight: 100;
+}
+.page-book-a-trial .radio-text {
+	width: 90%;
+	top: 25%;
+}
+.page-book-a-trial .trial-radio {
+	width: 90%;
+	top: 40%;
+}
+.page-book-a-trial .radio-btns label {
+	padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+	margin-bottom: -6px;
+    height: 137px;
+}
+.parent-section{
+	background-color: #F6F6F6;
+	padding-top:5rem;
+	padding-bottom: 5rem;
+}
+.parent-section-title{
+	background-color: #07153E;
+	max-width: 724px;
+}
+.parent-section-title h1{
+	color: #fff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 15px;
+}
+.parent-section-title span{
+	margin-right: .5rem;
+}
+.parent-text p{
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	color: #07153E;
+}
+.parent-text {
+	padding-top: 8rem;
+}
+/********************************************** Success Page **************************************/
+.page-booking-complete .trail-book{
+	display: none;
+}
+.b-complete{
+	max-width: 466px;
+	margin: 0 auto;
+	background-color: #FFCE33;
+}
+.b-complete h1 {
+    color: #07153E;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-align: center;
+    padding: 2rem;
+	font-weight: 700;
+	font-family: 'Gotham-medium';
+}
+.thank-you-text p{
+	font-size: 3.125rem;
+	line-height: 3.625rem;
+	color: #07153E;
+	text-align: center;
+}
+.success-page{
+	padding-bottom: 12.5rem;
+}
+.thank-you-text{
+	padding-top: 7.938rem;
+}
+/****************************** Payment Page **************************/
+
+.btn-back:hover{
+	text-decoration: none;
+}
+.btn-back{
+	color: #07153E;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+.container-back{
+	padding-left: 3rem;
+}
+.container-back a{
+	color:#07153E;
+	font-size: 1.875rem;
+    font-weight: bold;
+	text-decoration: none;
+}
+.btn-back span{
+	margin-right: .85rem;
+	position: relative;
+    top: -4px;
+}
+.payment-section{
+	padding-top: 4.688rem;
+}
+.success-title{
+	background-color: #07153E;
+	display: inline-block;
+}
+.success-title span{
+	padding-right: 1.5rem;
+}
+.success-title h1{
+	padding: 1.5rem;
+	color: #fff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+.page-payment .container{
+	max-width: 1364px;
+	margin: 0 auto;
+}
+.page-payment .footer .container{
+	max-width: 1700px;
+	margin: 0 auto;
+}
+
+.success-page-section{
+	padding-top: 2rem;
+}
+.payment-info-section{
+	padding-top: 4.688rem;
+}
+.payment-detail{
+	background-color: #F6F6F6;
+	padding-top: 6rem;
+	
+}
+.payment-detail h2{
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	color: #07153E;
+	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+	margin-left: 1.75rem;
+	margin-right: 1.75rem;
+}
+.product-info{
+	background-color: #FFCE33;
+	padding: 1.5rem;
+	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+	margin-left: 1.75rem;
+	margin-right: 1.75rem;
+	max-width: 550px;
+}
+.hr{
+	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+	margin-left: 1.75rem;
+	margin-right: 1.75rem;
+	padding-top: 2.625rem;
+	padding-bottom: 2.625rem;
+}
+.page-payment input{
+	margin-bottom: 1.5rem;
+}
+.product-info p {
+	color: #07153E;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.payment-detail h2 span{
+	font-weight: bold;
+}
+.payment-right-section{
+	text-align: right;
+}
+/****************************************************************Media Query form mobile**************************************************************/
+@media (max-width:576px) {
+
+	/****************************** Profile Page Media query **********************************/
+	.trials-title h1 {
+		font-size: 1rem !important;
+	}
+	.ccicons{
+		text-align: left !important;
+	}
+	.contact-title h1{
+		font-size: 1rem;
+	}
+	.medical-information .form-check {
+		top: -15px !important;
+	}
+	.medical-information .form-check{
+		padding-left: 10px;
+    	padding-right: 8px !important;
+		top: -15px;
+	}
+	
+
+	.font-size-30 {
+		font-size: 1.5rem;
+		line-height: 1.875rem;
+		text-align: justify;
+		overflow-wrap: break-word
+	}
+
+
+	.profile-page-title h1 {
+		color: #fff;
+		font-size: 1rem;
+		line-height: 2.25rem;
+		padding: 15px;
+	}
+
+	.pl-custom {
+		padding-left: 0;
+	}
+
+	.about-title h1,
+	.director-title h1 {
+		font-size: 1rem;
+	}
+
+	.about-page-content {
+		font-size: 1.5rem;
+		line-height: 1.875rem;
+	}
+
+	.about-title span {
+		margin-right: 0.5rem;
+	}
+
+	.pt-8 {
+		padding-top: 4.5rem;
+	}
+
+	/************************ what Clubs Says CSS *********************/
+	.what-clubs-title h1 {
+		font-size: 1.5rem;
+		line-height: 1.875rem;
+	}
+
+	.club-page-title h1 {
+		color: #fff;
+		font-size: 1.2rem;
+		line-height: 2.25rem;
+		/* padding-top: 4rem; */
+	}
+
+	.clubs-says-what h2 {
+		font-size: 2rem !important;
+		line-height: 2rem !important;
+		padding-bottom: 2rem;
+
+	}
+
+	.what-clubs-title h1 {
+		font-size: 2rem;
+		line-height: 2rem;
+		text-align: center;
+	}
+
+	.profile-hero-text p,
+	.created-text p {
+		font-size: 1.125rem;
+		line-height: 1.625rem;
+	}
+}
+.checkmarks:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+@media(max-width:767px) {
+	.rm-padidng , .login-profile-text{
+		max-width: 100% !important;
+		text-align: center;
+	}
+	.pre-launch-text p img {
+		margin-right: .5rem !important;
+	}
+	.launching-month, .pre-launch-text{
+		font-size: 1rem !important;
+	}
+	.page-login .login-padding{
+		padding-top: 0 !important;
+	}
+	p.login-password {
+		position: relative;
+		top: 1rem;
+	}
+	.login-under{
+		padding-top: 3rem !important;
+	}
+	p.login-submit {
+		position: relative;
+		top: 1rem;
+	}
+	input#user_login , input#user_pass {
+		width:100% !important;
+	}
+	.forget-pass{
+		text-align: left !important;
+		font-size: 1rem !important;
+		color: #fff !important;
+		margin-top: 1rem;
+	}
+	.hero-text p, .premier-league p, .league-matches p, .card-header, .recommended p{
+		font-size: 1rem !important;
+		line-height: 1.5rem !important;
+	}
+	section.about-content-with-text {
+		padding-top: 5rem !important;
+	}
+	.off-btn-center br, .add-br br{
+		display: block;
+	}
+	.off-text-white{
+		font-size: 1.2rem !important;
+		line-height:1.5rem;
+		color: #fff;
+	}
+	.off-text-yellow{
+		font-size: 1.2rem !important;
+		line-height:1.5rem;
+		color: #FFCE33;
+	}
+	.off-text-yellow p, .off-text-white p{
+		text-transform: uppercase;
+	}
+	.hidedefault{
+		font-size: 1rem;
+		color: #07153E;
+	}
+	.accordion-img-1 img{
+		width: 100%;
+	}
+	.sub-menu.dropdown-menu{
+		background-color: transparent !important;
+		text-align: left !important;
+	}
+	li.dropdown-toggle:hover .sub-menu.dropdown-menu li a {
+		color: #fff !important;
+	}
+	.trail-book a.nav-link{
+		background-color: transparent !important;
+		color: #fff !important;
+	}
+	.cr-indicators {
+		bottom: 80px;
+	}
+	.nav-item::before {
+		position: absolute;
+		display: block;
+		top: 23px;
+		left: 10px;
+		width: 11px;
+		height: 1px;
+		content: "";
+		border: none;
+		background-color: #FFCE33;
+		vertical-align: 0;
+	}
+	.dropdown-toggle::after {
+		position: absolute;
+		display: block;
+		top: 18px;
+    	left: 11px;
+		width: 1px;
+		height: 11px !important;
+		content: "";
+		border: none;
+		background-color: #FFCE33;
+		vertical-align: 0;
+		transition: all 200ms linear;
+		opacity: 1;
+	}
+	#menu-main-menu .dropdown-item:hover, #menu-main-menu .dropdown-item:focus {
+		color: #07153E;
+		background-color: transparent;
+	}
+	.crnum .form-control , .crmn .form-control , .cryr .form-control , .crcv .form-control{
+		border: none;
+	}	
+	.border-desktop .crnum {
+		width: 100% !important;
+	}	
+	.border-desktop .crmn, .border-desktop .cryr, .border-desktop .crcv {
+		width: 33.3% !important;
+	}	
+	.payment-info-section .payment-detail h2, .payment-info-section .product-info p{
+		font-size: .85rem !important;
+		line-height: 1.5rem !important;
+	}
+	.page-payment .border-desktop input {
+		margin-bottom: 0rem !important;
+	}
+	.arrow{
+		display: none;
+	}
+	.cryr, .crnum , .crmn , .crcv{
+		border: 1px solid #07153E;
+	}
+	.upersec{
+		text-align: center;
+	}
+	.container-back a{
+		color:#07153E;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	.yellowbackground span.caret:after{
+		top: 0 !important;
+		left: 95% !important;
+	}
+	div#getEventinfo p{
+		font-size: 1rem !important;
+		line-height: 1.5rem !important;
+	}
+	.profile-page-title{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.profile-hero-text p, .created-text p{
+		overflow-wrap: break-word;
+	}
+	.what-clubs-title h1{
+		padding-top: 4rem;
+	}
+	.contact-info br{
+		display: block;
+	}
+	.card-header{
+		padding: .85rem 1.25rem;
+	}
+	.contact-form , .contact-text{
+		padding-top: 3rem !important;
+	}
+	.contact-text{
+		padding-top: 3.5rem !important;
+	}
+	.btn-cntr{
+		text-align: center;
+	}
+	#menu-footer-menu li{
+		padding-left: 0 !important;
+	}
+	.contact-submit {
+    padding-top: 2rem;
+    text-align: center !important;
+}
+	.btn-transparent{
+		font-size: 1rem !important;
+		padding: 1rem 1rem !important;
+	}
+	
+	.book-trial-title , .cost-trial-title{
+		display: block;
+		text-align: center;
+		max-width: 100%;
+		margin-right: 0;
+	}
+	.page-book-a-trial .radio-btns label{
+		width: 100%;
+	}
+	.journey-img img{
+		left: 0 !important;
+	}
+	.mtreat .mb-3{
+		margin-bottom: 0 !important;
+	}
+	.up-mob{
+		margin-top: -41px;
+	}
+	.page-create-profile .checkmark {
+		height: 61px !important;
+	}
+	.csel select.form-control{
+		margin-bottom: 30px !important;
+		padding: 1rem !important;
+	}
+	.footer {
+		padding-top: 0;
+	}
+	.chck label{
+		padding-top: 2.5rem !important;
+	}
+	.chck .radio-text{
+		top: 35% !important;
+	}
+	#menu-footer-menu{
+		text-align: center;
+	}
+	.aspire-level{
+		padding-bottom: 1.625rem !important;
+		padding-top: 2rem !important;
+	}
+	.pt-7{
+		padding-top: 2rem !important;
+	}
+	.pb-8 {
+		padding-bottom: 2rem !important;
+	}
+	.aspire-section {
+		padding-top: 2rem !important;
+	}
+	.page-book-a-trial .trial-page-form .rd1 .radio-text{
+		top: 40% !important;
+	}
+	.hero-text.space-left{
+		padding-left: 0rem !important;
+	}
+	.rem-margin{
+		margin-right: 0;
+	}
+	.rem-padding{
+padding-right: 0;
+	}
+	.profile-hero-text{
+		padding-top: 2rem;
+	}
+	.blur-background{
+		margin-top: 2rem;
+	}
+	.graph-text p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.graph-text {
+		margin: 0 auto;
+		max-width: 100%;
+		padding: 0 1rem;
+	}
+	.journey-text h2{
+		font-size: 1.5rem;
+		list-style: 2rem;
+	}
+	.main-uppercase{
+		padding-bottom: 0rem;
+	}
+	.aspire-title span {
+		margin-right: .5rem;
+	}
+	.journey-text {
+		font-size: 1.125rem !important;
+		line-height: 1.5rem !important;
+	}
+	.aspire-leve-para p {
+		font-size: 1.125rem !important;
+		line-height: 1.625rem !important;
+		color: #07153E;
+	}
+	.navigation-wrap{
+		display: block;
+	}
+	.checkmark:after{
+		width: 10px;
+		height: 25px;
+	}
+	select.form-control {
+		height: auto !important;
+		padding: .58rem !important;
+		border-radius: 0;
+		margin-bottom: 8px !important;
+	}
+	.pad-left{
+		padding-left: 0 !important;
+	}
+	.pad-right{
+		padding-right: 0 !important;
+	}
+	.page-book-a-trial .booking-time .cl-radio .radio-text {
+		width: 90%;
+		top: 40% !important;
+	}
+	.booking-time .radio-btns{
+		justify-content: center;
+	}
+	.chck.radio-btns .checkmark:after{
+		top: 12px !important;
+	}
+
+	/*************************Home Page ******************************/
+	.journey-text {
+		max-width: 1088px;
+		margin: 0 auto;
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
+	.parent-section{
+		padding-bottom: 2rem;
+		padding-top: 5.875rem;
+	}
+	.parent-text {
+		padding-top: 4rem;
+	}
+	.page-book-a-trial .radio-btns label{
+		height: 100px;
+	}
+	.book-a-trial {
+		padding-top: 3.688rem;
+	}
+	.aspire-leve-para {
+		padding-bottom: 2rem;
+	}
+
+	.page-home .custom-logo-link {
+		height: auto !important;
+		width: auto !important;
+		top: 0px;
+	}
+
+	.page-home .custom-logo-link .custom-logo {
+		height: 100px !important;
+		width: 100px !important;
+	}
+
+	.navbar-light .navbar-toggler-icon {
+		border-bottom: 1px solid #FFCE33;
+	}
+
+	.navbar-light .navbar-toggler-icon:after,
+	.navbar-light .navbar-toggler-icon:before {
+		background-color: #FFCE33;
+	}
+
+	.navigation-wrap {
+		height: 140px;
+	}
+
+	.hero-section {
+		height: 100vh !important;
+	}
+	.blur-backgrounds{
+		justify-content: center;
+	}
+	.blur-backgrounds {
+		height: 120px !important;
+		padding-left: 10px;
+	}
+
+	.hero-text {
+		font-size: 14px !important;
+		line-height: 15px !important;
+	}
+
+	.hero-text-normal {
+		font-size: 14px !important;
+		line-height: 15px !important;
+		color: #fff;
+	}
+
+	.about-text p {
+		font-size: 1.125rem !important;
+		line-height: 30px !important;
+	}
+
+	.img-text {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.pt-7 {
+		padding-top: 2.813rem;
+	}
+
+	.pb-8 {
+		padding-bottom: 2.875rem;
+	}
+
+	.about-content {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.journey-section {
+		padding-top: 2.125rem;
+		padding-bottom: 2.625rem;
+	}
+
+	.oppertunity-title h1 {
+		text-align: center;
+		font-size: 1.5rem !important;
+	}
+
+	.oppertunity .young-footballers h2 {
+		font-size: 1.5rem !important;
+		line-height: 2rem;
+		text-align: center;
+	}
+
+	.aspire-leve-para p {
+		font-size: 1.5rem;
+		line-height: 2rem;
+		color: #07153E;
+	}
+
+	.btn-submit {
+		font-size: 1rem;
+	}
+
+	.page-home .blured-text {
+		font-size: 1.2rem !important;
+	}
+
+	.aspire-title h2 {
+		font-size: 1rem !important;
+		text-align: center;
+	}
+
+	.top {
+		/* top: 130px; */
+		background-color: #07153E;
+	}
+
+	.page-home .pad-left {
+		padding-right: 0;
+	}
+
+	.navbar-toggler {
+		margin-right: 25px;
+	}
+
+	.m-logo {
+		text-align: center;
+	}
+
+	.footer-logo img {
+		margin-top: 0;
+		padding-top: 20px;
+	}
+
+	.social-links {
+		text-align: center;
+	}
+	.page-book-a-trial .trial-page-form .radio-text {
+		width: 90%;
+		top: 25% !important;
+	}
+	.parent-section-title h1 , .cost-trial-title h1, .book-trial-title h1{
+		font-size: 1rem !important;
+		line-height: 1.5rem;
+	}
+
+	.design-text,
+	.copy-text {
+		text-align: center;
+	}
+
+	/****************************** Trial Page *******************************/
+
+	.hero-text {
+		padding-top: 1.5rem;
+	}
+
+	.trials-section {
+		padding-top: 4.563rem;
+	}
+
+	.trials-hero {
+		padding-top: 3.063rem;
+		padding-bottom: 3.063rem;
+		background-position: center center;
+	}
+
+	.step-section {
+		padding-top: 4.688rem;
+		padding-bottom: 3.813rem;
+		background-color: #F6F6F6;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.step-discussion p,
+	.premier-league p {
+		padding-bottom: 0.5rem;
+	}
+
+	.accordian-section {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.btn-cost {
+		font-size: 1rem;
+	}
+
+	.professional-section {
+		padding-top: 1.25rem;
+	}
+	.trials-hero{
+		padding-top: 0rem;
+		padding-bottom: 0rem;
+	}
+	.trials-section {
+		padding-top: 3.563rem !important;
+	}
+	.can-do {
+		padding-bottom: 2.25rem;
+	}
+	.trial-graph {
+		background-color: #F6F6F6;
+		padding-bottom: 1.313rem;
+	}
+
+	.recommended h2 {
+		font-size: 1.5rem !important;
+		line-height: 1.7rem !important;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.recommended p {
+		padding-top: 1rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	.trials-title h1 {
+		font-size: 1.5rem;
+	}
+
+	/****************************** Profile Page *******************************/
+
+	.book-cost-btn {
+		padding-top: 3rem;
+	}
+
+	.after-btn-content {
+		padding-top: 3.75rem;
+	}
+
+	.card-body p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		color: #07153E;
+	}
+
+	.accordion-main-content,
+	a.card-title {
+		font-size: 1.125rem;
+		line-height: 1.875rem;
+		color: #07153E;
+		font-weight: 700;
+	}
+	.card-header{
+		padding: .75rem 1rem;
+	}
+
+	.profile-page-section {
+		padding-bottom: 5.063rem;
+	}
+
+	.profile-page-title h1 {
+		color: #fff;
+		font-size: 1rem;
+		line-height: 2.25rem;
+		padding: 15px;
+		text-align: center;
+	}
+
+	/************************Contact Page Media Query *************************/
+	.contact-content {
+		padding-top: 1rem;
+	}
+
+	.contact-content p {
+		font-size: 2.125rem;
+		line-height: 2.165rem;
+	}
+
+	.contact-text {
+		padding-top: 5.5rem;
+		padding-bottom: 7.938rem;
+	}
+
+	.contact-page-info a {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+	}
+
+	.contact-form {
+		background-color: #F6F6F6;
+		padding-top: 6.25rem;
+		padding-bottom: 3.5rem;
+	}
+
+	.lname {
+		margin-top: 2.5rem;
+	}
+
+	/********************************* Covid -19 Page ******************************/
+
+	.covid-data p {
+		font-size: 15px;
+		line-height: 25px;
+	}
+
+	.covid-data h4,
+	.contact-info h4,
+	.contact-info a {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.covid-data {
+		padding-top: 0.875rem;
+		color: #07153E;
+	}
+
+	.covid-guidlines {
+		padding-top: 4.938rem;
+		padding-bottom: 3.938rem;
+	}
+
+	/************************ Contact Page *******************/
+
+	.contact-content p,
+	.contact-page-info a {
+		color: #07153E;
+		font-size: 1.5rem !important;
+		line-height: 1.875rem !important;
+	}
+
+	.form-control {
+		font-size: 1rem !important;
+		padding: 0.563rem;
+	}
+
+	/********************** What Clubs Say ********************/
+
+	.what-clubs-title h1 {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+		text-align: center;
+	}
+
+	.clubs-says-what h2 {
+		font-size: 3rem;
+		line-height: 3.25rem;
+		text-align: center;
+	}
+
+	/**************** Create Profie Page **********************/
+	.radio-btns label{
+		font-size: 1.5rem;
+	}
+	.division-label{
+		margin-top: 1.875rem;
+	}
+	label{
+		padding-top: .5rem !important;
+		font-size: 1.2rem !important;
+	}
+	.radio-text{
+		top: 50% !important;
+		font-size: 1rem !important;
+	}
+	.checkmark {
+		height: 50px !important;
+	}
+	.checkmarks {
+		padding: 18px;
+		font-size: 1rem;
+		height: 65px;
+	}
+	.parent-information{
+		padding-top: 6.5rem;
+    padding-bottom: 4rem;
+	}
+	.form-control{
+		width: 100%;
+		margin-right: 0;
+	}
+	.custom-logo-link .custom-logo {
+		height: 100px;
+		width: 100px;
+		position: relative;
+		left: 1rem;
+		color: ;
+		
+	}
+	.m-label label{
+		padding-top: 2rem !important;
+		margin-bottom: 11px;
+	}
+	.frm-submit {
+		padding-top: 2.875rem;
+	}
+	.medical-information {
+		padding-top: 4.5rem;
+		padding-bottom: 3.43rem;
+	}
+	.nav-item:after{
+		height: 0;
+	}
+	/******************************** Success Page CSS ***************************/
+
+	.success-page {
+		padding-bottom: 3.5rem !important;
+	}
+	.success-page-section {
+		padding-top: 3.563rem !important;
+	}
+	.thank-you-text {
+		padding-top: 2.938rem !important;
+	}
+	.b-complete h1{
+		font-size: 1.5rem;
+		padding: 1rem;
+		font-weight: 700;
+	}
+	.thank-you-text p {
+		font-size: 1.5rem !important;
+		line-height: 1.875rem !important;
+	}
+	/******************************** Payment Page *****************************/
+
+	.created-text {
+		padding-top: 1.25rem;
+		padding-bottom: 3rem;
+	}
+	.payment-detail h2{
+		font-size: 1rem;
+		padding-right: 1rem !important;
+		padding-left: 1rem !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.product-info p {
+		color: #07153E;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	.success-title h1 {
+		padding: 1rem;
+		color: #fff;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	.btn-back {
+		color: #07153E;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	.hr{
+		padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+	}
+	.payment-detail {
+		background-color: #F6F6F6;
+		padding-top: 2rem;
+	}
+	.payment-form {
+		padding-top: 3rem;
+	}
+}
+.radio-text-inline{
+	top: 60%;
+}
+.book-chckbox .checkmarks {
+    border-radius: 50px;
+    padding-left: 2.5rem;
+}
+.checkbox-btns .checkmarks:after {
+	left: 80%;
+    top: 25px;
+    width: 12px;
+    height: 33px;
+	border: solid #07153E;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+  .checkbox-btns .checkmarks:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-btns input:checked ~ .checkmarks:after {
+	display: block;
+  }
+@media screen and (max-width:1869px) {
+	.nav-link , .trail-book:hover a.nav-link , .trail-book a.nav-link{
+		padding: 10px 5px !important;
+		font-size: 1.2rem;
+	}
+	.blured-text{
+		font-size: 4rem;
+	}
+	.sub-menu.dropdown-menu{
+		min-width:180px !important;
+	}
+	
+}
+.reaction{
+	top: 60px !important;
+}
+@media (max-width:1400px) {
+	.off-text-white{
+		font-size: 1.875rem;
+		line-height:2.2rem;
+		color: #fff;
+	}
+	.launching-month, .pre-launch-text{
+		font-size: 1rem !important;
+	}
+	.btn-trail-button {
+		font-size: 1rem !important;
+	}
+	.thank-you-text {
+		padding-top: 3.938rem !important;
+	}
+	.login-submit input[type="submit"]{
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	.rm-padidng h1 , .login-profile-text{
+		padding: 1.5rem !important;
+		font-size: 1.5rem;
+	}
+	section.about-content-with-text {
+		padding-top: 8rem !important;
+	}
+	.off-text-yellow{
+		font-size: 1.875rem;
+		line-height:2.2rem;
+		color: #FFCE33;
+	}
+	.allergie {
+		position: relative;
+		top: 33px;
+	}
+	.lheight{
+		padding:0.563rem !important;
+	}
+	.radio-btns .rd1 .checkmark:after{
+		top: 30px !important;
+	}
+	.checkbox-btns .checkmarks:after{
+		top: 15px !important;
+		height: 25px;
+	}
+	.checkmark:after{
+		top: 10px;
+	}
+	.blured-text {
+		font-size: 3rem;
+	}
+	.radio-text{
+		font-size: 1.5rem;
+		top: 125%;
+	}
+	.radio-text-inline{
+		font-size: 1.5rem;
+		top: 40%;
+	}
+	.checkmark{
+		height: 70px;
+		
+	}
+	.medical-information .form-check{
+		top: 0;
+	}
+	.radio-btns .checkmark:after{
+		top: 20px !important;
+    width: 8px !important;
+    height: 25px !important;
+	}
+	.cl-radio.radio-btns .checkmark:after{
+		top: 30px !important;
+	}
+	.checkmarks{
+		padding: 12px;
+		font-size: 1.2rem;
+		height: 65px;
+	}
+	.parent-section .radio-text {
+		width: 90%;
+		top: 17%;
+	}
+	.parent-section .radio-btns .checkmark {
+		border-radius: 50px !important;
+		height: 70px !important;
+	}
+	.hero-text {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.hero-text {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.page-home .custom-logo-link {
+		height: 200px;
+		width: 157px;
+	}
+
+	.page-home .custom-logo-link .custom-logo {
+		height: 150px;
+		width: 130px;
+	}
+
+	.hero-sub-text {
+		padding-top: 1.063rem;
+	}
+
+	.hero-text-normal {
+		font-size: 25px;
+		line-height: 30px;
+		color: #fff;
+		/* padding-left: 1.5rem; */
+	}
+
+	.about-text p {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+		color: #07153E;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.pb-8 {
+		padding-bottom: 5.875rem;
+	}
+
+	.pt-7 {
+		padding-top: 4.813rem;
+	}
+
+	.young-footballers h2 {
+		color: #fff;
+		font-size: 3rem;
+		line-height: 3.25rem;
+		padding-bottom: 5rem;
+	}
+
+	.oppertunity-title h1 {
+		color: #fff;
+		font-size: 1.875rem;
+		padding-top: 4rem;
+		padding-bottom: 1rem;
+		font-weight: bold;
+	}
+
+	.aspire-leve-para p {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+		color: #07153E;
+	}
+
+	.btn-submit {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.social-icons {
+		width: 25px;
+	}
+
+	.about-content {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+
+	/************************************** Trail Page Media Query *************************/
+
+	.hero-text p,
+	.premier-league p,
+	.league-matches p,
+	.card-header,
+	.recommended p {
+		color: #07153E;
+		font-size: 1.3rem;
+		line-height: 1.8rem;
+	}
+
+	.step-discussion p {
+		font-size: 1.3rem;
+		line-height: 1.8rem;
+		padding-bottom: 2.5rem;
+		color: #07153E;
+	}
+
+	.btn-cost {
+		padding-left: 1.3rem;
+		padding-right: 1.5rem;
+	}
+
+	.recommended h2 {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+	}
+
+	.recommended {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	.trials-section {
+		padding-top: 6.563rem;
+	}
+
+	/************************************ Contact Page *********************/
+
+	.contact-content p {
+		color: #07153E;
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+	}
+
+	.contact-page-info a {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+	}
+
+	.contact-text {
+		padding-top: 6.5rem;
+		padding-bottom: 6.938rem;
+	}
+
+	.contact-form {
+		background-color: #F6F6F6;
+		padding-top: 7.25rem;
+		padding-bottom: 3.5rem;
+	}
+
+	label {
+		padding-top: .5rem;
+		padding-bottom: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	.form-control {
+		font-size: 1.5rem;
+		padding: 0.563rem;
+	}
+
+	select.form-control {
+		height: auto !important;
+		padding: .58rem !important;
+		border-radius: 0;
+		margin-bottom: 8px;
+	}
+
+	/***************** Profile Page ********************/
+	.profile-hero-text p,
+	.created-text p {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+	}
+	/************************** Success Page ************************/
+	.success-page {
+		padding-bottom: 8.5rem;
+	}
+	.thank-you-text p{
+		font-size: 2.125rem;
+    	line-height: 2.625rem;
+	}
+	.i-agree{
+
+	}
+}
+.thank-you-text {
+    padding-top: 5.938rem;
+}
+.parent-section .radio-btns{
+	padding-bottom: 0 !important;
+}
+.parent-section .checkmark{
+	border-radius: 50px !important;
+	height: 100px !important;
+}
+.parent-text{
+	padding-bottom: 6.938rem;
+}
+@media (max-width:1250px){
+	.blur-backgrounds {
+		height: 180px;
+	}
+}
+@media (max-width:1024px) {
+	.off-text-white{
+		font-size: 1.5rem;
+		line-height:1.875rem;
+		color: #fff;
+	}
+	section.about-content-with-text {
+		padding-top: 6rem !important;
+	}
+	.off-text-yellow{
+		font-size: 1.5rem;
+		line-height:1.875rem;
+		color: #FFCE33;
+	}
+	
+	.space-left{
+		padding-left: 2rem !important;
+	}
+	.fa-credit-card:before {
+		content: "\f09d";
+		font-size: 1em !important;
+	}
+	
+	.crnum {
+		width: 64% !important;
+	}
+	.crmn {
+		width: 8% !important;
+	}
+	.cryr {
+		width: 10% !important;
+	}
+	.crcv {
+		width: 10% !important;
+	}
+	.arrow {
+		font-size: 1.2rem !important;
+	}
+	.medical-information .form-check , .pl-pr{
+		padding-right: 7px;
+	}
+	.hero-section{
+		height: 80vw;
+	}
+
+	.blured-text {
+		font-size: 2.5rem !important;
+	}
+
+	.hero-text {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.hero-text-normal {
+		font-size: 20px;
+		line-height: 25px;
+		color: #fff;
+	}
+
+
+	.oppertunity .young-footballers h2 {
+		font-size: 2.1rem;
+		line-height: 2.25rem;
+		padding-bottom: 5rem;
+	}
+
+	.journey-text {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.aspire-title h2 {
+		font-size: 1.5rem;
+	}
+
+	.design-text,
+	.copy-text {
+		font-size: 14px;
+		color: #fff;
+	}
+
+	.social-links span {
+		margin-right: .5rem !important;
+	}
+
+	.social-icons {
+		width: 30px;
+	}
+}
+
+@media screen and (max-width:991px) and (min-width:768px) {
+	.nav-link {
+		font-size: .6rem !important;
+	}
+	.yellowbackground span.caret:after {
+		left: 95% !important;
+		top: 10px;
+		width: 10px;
+		height: 25px;
+		border: solid #07153E;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate( 
+	45deg
+	 );
+		-ms-transform: rotate(45deg);
+		transform: rotate( 
+	45deg
+	 );
+		position: absolute;
+		content: '';
+	}
+	.page-book-a-trial .radio-btns .rd1 .radio-text{
+		top: 40% !important;
+	}
+	.yellowbackground .caret img{
+		display: none;
+	}
+	.radio-btns .checkmark:after {
+		top: 12px !important;
+	}
+	.profile-page-title{
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	.medical-information .form-check {
+		padding-left: 10px;
+		padding-right: 8px;
+	}
+	.pl-pr {
+		padding-right: 8px;
+	}
+	#menu-main-menu .menu-item {
+		margin-left: 0rem !important;
+	}
+
+	.page-home .custom-logo-link {
+		height: 150px;
+		width: 130px;
+	}
+
+	.page-home .custom-logo-link .custom-logo {
+		height: 120px;
+		width: 100px;
+	}
+
+	.hero-text {
+		font-size: 15px;
+		line-height: 20px;
+	}
+	.journey-img img {
+		
+		left: 0 !important;
+	}
+	.hero-text-normal {
+		font-size: 15px;
+		line-height: 20px;
+		color: #fff;
+	}
+
+	.blur-backgrounds {
+		height: 130px;
+	}
+
+	.blured-text {
+		font-size: 1.5rem !important;
+	}
+
+	.social-icons {
+		width: 15px;
+	}
+	/************************************ Payment Page ************************/
+
+	.page-payment label{
+		padding-top: 1.5rem;
+	}
+}
+
+@media screen and (max-width:1145px) and (min-width:992px) {
+	.nav-link {
+		font-size: .8rem !important;
+	}
+	#menu-main-menu .sub-menu.dropdown-menu .dropdown-item{
+		margin-left: 0rem !important;
+	}
+
+	#menu-main-menu .menu-item {
+		margin-left: 1rem !important;
+	}
+	.sub-menu.dropdown-menu {
+		min-width: 125px !important;
+	}
+}
+
+@media (max-width:1360px) {
+
+	.nav-link {
+		font-size: 1rem;
+	}
+
+	.pt-7 {
+		padding-top: 4.813rem;
+	}
+
+	.pb-8 {
+		padding-bottom: 4.875rem;
+	}
+
+	.about-text p {
+		font-size: 2.125rem;
+		line-height: 40px;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.journey-img {
+		padding-bottom: 5rem;
+	}
+
+	.oppertunity-title h1 {
+		padding-top: 5rem;
+	}
+
+	.young-footballers h2 {
+		font-size: 3rem;
+		line-height: 2.25rem;
+		padding-bottom: 5rem;
+	}
+
+	.oppertunity-title h1 {
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+	}
+
+	.aspire-level {
+		padding-top: 5rem;
+		padding-bottom: 5.625rem;
+	}
+
+	.aspire-section {
+		padding-top: 4.75rem;
+	}
+
+	.aspire-leve-para p {
+		font-size: 2.125rem;
+		line-height: 2.625rem;
+		color: #07153E;
+	}
+
+	.img-text {
+		padding-bottom: 0;
+	}
+}
+.note-text p{
+	font-size: 20px;
+	line-height: 24px;
+}
+@media (max-width:991px) {
+	.director-profile-img {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	section.about-content-with-text {
+		padding-top: 6rem !important;
+	}
+	.off-btn-center a{
+		font-size: 1.125rem !important;
+	}
+	.sub-menu.dropdown-menu{
+		min-width: 90px !important;
+	}
+	#loginform{
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.apnd-location br{
+		display: block !important;
+	}
+	.profile-hero-text{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.page-book-a-trial .radio-btns label{
+		width: 100%;
+	} 
+	.note-text p{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.premier-league p{
+		padding-bottom: 0;
+	}
+	.step-section {
+		padding-top: 0rem;
+		padding-bottom: 2.813rem;
+		background-color: #F6F6F6;
+	}
+	.hero-section{
+		height: 100vw;
+	}
+	.btn-cost{
+		font-size: 1.125rem;
+    padding: 1rem .78rem;
+	}
+	.space-left{
+		padding-left: 0 !important;
+		padding-top: 2rem;
+	}
+	.hero-section-image {
+		text-align: center;
+	}
+	.display-none{
+		display: none;
+	}
+	.btn-submit{
+		font-size: 1.125rem;
+		padding: 1rem .82rem;
+	}
+	.frm-submit {
+		padding-top: 2.875rem;
+	}
+	.book-chckbox .checkmarks {
+		border-radius: 50px;
+		padding-left: 1.5rem;
+	}
+	.checkbox-btns .checkmarks:after {
+		top: 15px !important;
+		height: 20px;
+		width: 8px;
+	}
+	.created-text {
+		padding-top: 1.25rem;
+		padding-bottom: 0rem;
+	}
+	.checkmark {
+		height: 60px;
+	}
+	.allergie {
+		position: relative;
+		top: 22px;
+	}
+	.medical-information .form-check {
+		top: -10px;
+	}
+	label {
+		padding-top: .5rem;
+		padding-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+	.radio-text {
+		font-size: 1.2rem;
+	}
+	.form-control {
+		font-size: 1.2rem;
+		padding: 0.563rem;
+	}
+	.medical-information {
+		padding-top: 4.5rem;
+		padding-bottom: 4.43rem;
+	}
+	.radio-text-inline {
+		font-size: 1.2rem;
+		top: 35%;
+	}
+	.radio-btns label{
+		font-size: 1.2rem;
+		margin-bottom: 0;
+	}
+	/* .page-book-a-trial .cl-radio .checkmark {
+		height: 70px !important;
+	} */
+	br{
+		display: none;
+	}
+	.page-book-a-trial .radio-btns label{
+		font-size: 1.5rem;
+	}
+	.cost-trial-title h1 , .book-trial-title h1 {
+		font-size: 1.5rem;
+	}
+	.booking-time p{
+		font-size: 1.5rem !important;
+		padding: 1rem 3rem !important;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+		font-size: 1.5rem !important;
+	}
+	.ui-datepicker th{
+		font-size: 1.5rem !important;
+	}
+	.parent-text p{
+		font-size: 1.5rem;
+	}
+	.page-book-a-trial .radio-text {
+		width: 90%;
+		top: 25% !important;
+	}
+	.page-book-a-trial .checkmark {
+		height: 105px !important;
+	}
+	.book-trial-title{
+		margin-bottom: 1rem;
+	}
+}
+
+select {
+	background-image: url(/wp-content/uploads/2021/06/Path-28.png) !important;
+	background-position: 95% 50%;
+	background-size: 18px 13px;
+	background-repeat: no-repeat;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: none !important;
+    background: transparent !important;
+    font-weight: bold !important;
+    color: #07153E !important;
+    font-size: 1.875rem;
+    font-family: 'Gotham';
+	text-align: center;
+}
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+    font-size:1.875rem;
+}
+.ui-widget-content {
+	border: none;
+}
+.ui-datepicker table , .ui-datepicker{
+	width: 100% !important;
+}
+.ui-widget.ui-widget-content{
+    border: none !important;
+}
+.ui-datepicker .ui-datepicker-prev  ,span.ui-datepicker-year{
+	/* display: none !important; */
+}
+.ui-datepicker th{
+	padding: .7em 0em !important;
+}
+.ui-datepicker .ui-datepicker-title{
+	margin: 0 0em !important;
+	padding: 0 2rem;
+	text-align: left !important;
+}
+.ui-widget-header{
+	border: none !important;
+	background: transparent !important;
+	color: #07153E !important;
+	font-weight: bold !important;
+	font-size: 1.875rem;
+}
+.booking-time p{
+	border: 5px solid #000;
+    padding: 1rem 4rem;
+    font-size: 1.875rem;
+    text-align: center;
+    
+}
+.booking-time .radio-btns{
+	margin-top: 6rem;   
+}
+.booking-time .cl-radio .checkmark{
+	height: 100px;
+}
+.current_page_item.nav-item::after{
+	position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #FFCE33;
+    opacity: 1;
+    transition: all 200ms linear;
+}
+
+.radio-btns .checkmark:after {
+    left: 85%;
+    top: 26px;
+    width: 12px;
+    height: 32px;
+    border: solid #07153E;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(
+45deg
+);
+    -ms-transform: rotate(45deg);
+    transform: rotate(
+45deg
+);
+    position: absolute;
+}
+input:checked ~ .checkmark:after {
+    display: block;
+}
+
+@media (max-width:1677px){
+	.social-links span {
+		margin-right: .875rem;
+	}	
+}
+.ui-datepicker-today .ui-state-active{
+	color: #FFCE33 !important;
+}
+.ui-widget-header .ui-icon {
+    background-image: url(/wp-content/uploads/2021/07/Path-134.png) !important;
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+	left: 0 !important;
+}
+.ui-icon-circle-triangle-e {
+    background-position: center !important;
+}
+.ui-icon {
+    width: 30px !important;
+    height: 30px !important;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{
+	border: none !important;
+	background: transparent !important;
+}
+.signed::placeholder {
+	font-family: 'Briem-Script';
+	opacity: 1; /* Firefox */
+	text-transform: capitalize;
+
+  }
+  .signed{
+	font-family: 'Briem-Script';
+	text-transform: capitalize;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	font-family: 'Briem-Script';
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+	font-family: 'Briem-Script';
+  }
+  .signed::-moz-placeholder{
+	font-family: 'Briem-Script';
+  }
+  .page-create-profile .trail-book, .page-book-a-trial .trail-book , .page-payment .trail-book{
+	  display: none;
+  }
+
+  @media screen and (max-width:1333px) and (min-width:1300px){
+	.nav-link {
+		padding: 10px 0px !important;
+		font-size: 1.2rem;
+	}
+  }
+  @media screen and (max-width:1433px) and (min-width:1400px){
+	.nav-link {
+		padding: 10px 0px !important;
+		font-size: 1.2rem;
+	}
+  }
+  @media screen and (max-width:1903px) and (min-width:1870px){
+	.nav-link ,  .trail-book:hover a.nav-link , .trail-book a.nav-link{
+		padding: 5px 5px !important;
+	}
+  }
+  @media screen  and (max-width:1203px) and (min-width:1146px){
+	#menu-main-menu .menu-item {
+		margin-left: .5rem !important;
+	}
+  }
+  .apnd-location .form-control{
+	margin-top: 2.5rem;
+  }
+  .extra-text{
+	  border: none !important;
+	  padding-left: 0 !important;
+	  text-align: left !important;
+	}
+	.btn-transparent{
+		background-color: transparent;
+		border: 4px solid #07153E;
+		padding: 1rem 2rem;
+		margin-bottom: 2rem;
+		border-radius: 0 !important;
+		font-size: 1.75rem;
+		text-align: left;
+		font-weight: bold;
+		color:#07153E;
+		overflow:hidden;
+	}
+	.caret {
+		text-align: right;
+		width: 100%;
+		position: absolute;
+		left: -1.875rem;
+		top: 12px;
+	}
+	.dropdown-menu.show{
+		width: 100%;
+	}
+	.dropdown-menu .dropdown-item b{
+		font-size: 1.75rem;
+	}
+	
+	.dropdown-menu .dropdown-item {
+		font-size: 1rem;
+		padding: 10px 20px;
+		border-bottom: 4px solid #07153E;
+		position: relative;
+	}
+	.hero-sub-text .hero-text span{
+		color: #FFCE33;
+	}
+	.journey-img img {
+		position: relative;
+		left: -27px;
+	}
+	.space-left{
+		padding-left: 4rem;
+	}
+
+	.card-header:hover {
+		background-color: #FFCE33;
+	}
+	.card-header{
+		background-color: #fff ;
+		transition: all .3s;
+	}
+	.page-book-a-trial .rd1 .radio-text{
+		top: 40%;
+	}
+	.page-book-a-trial .rd1 .checkmark{
+		height: 105px !important;
+	}
+	.page-book-a-trial .rd1{
+		height: 100px !important;
+	}
+
+	.btn-transparent:hover{
+		background-color: #FFCE33;
+	}
+
+	@media (max-width:1600px){
+		.oppertunity .container, .aspire-section .container, .hero-section .container , .about-text {
+			max-width: 1300px;
+		}
+		.blured-text {
+			font-size: 3.5rem;
+		}
+		.blur-backgrounds {
+			height: 200px;
+		}
+		.page-home .hero-text p {
+			font-size: 20px;
+			line-height: 25px;
+			color: #fff;
+		}
+		.page-home .hero-text span {
+			font-size: 20px;
+			line-height: 25px;
+		}
+		.hero-text-normal {
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+	div#getEventinfo p {
+		color: #07153E;
+		font-size: 1.875rem;
+		line-height: 2.2rem;
+		font-weight: bold;
+	}
+	@media (max-width:1650px){
+		.container-back{
+			padding-left: 0;
+		}
+	}
+	form#bookingForm {
+		padding-top: 3rem;
+	}
+	.p-dis{
+		color: #707070 !important;
+		padding-top: 10px;
+	}
+	span.ui-datepicker-month {
+		text-transform: uppercase !important;
+	}
+	a.ui-state-default.ui-state-active {
+		color: #FFCE33 !important;
+	}
+	#menu-footer-menu .nav-item::after{
+		display: none;
+	}
+	#menu-footer-menu .current-menu-item a{
+		color: #FFCE33 !important;
+	}
+	.card-header {
+		padding: 2rem 1.25rem;
+	}
+	@media screen and (max-width:722px) and (min-width:577px) {
+		.medical-information .form-check {
+			top: -15px;
+			padding-right: 6px !important;
+		}
+	}
+	@media screen and (max-width:767px) and (min-width:723px) {
+		.medical-information .form-check {
+			top: -15px;
+			padding-right: 5px !important;
+		}
+	}
+	@media screen and (max-width:991px) and (min-width:799px) {
+		.medical-information .form-check {
+			padding-right: 7px;
+		}
+	}
+
+	@media screen and (max-width:1365px) and (min-width:1025px) {
+		.medical-information .form-check , .pl-pr{
+			padding-right: 6px;
+		}
+	}
+	@media screen and (max-width:876px) and (min-width:768px){
+		.page-create-profile .checkbox-btns .checkmarks{
+			height: 60px;
+			font-size: 1rem;
+		}
+	}
+@media (min-width:768px){
+	
+	.card-deatils-num{
+		border: transparent;
+		margin-bottom: 0 !important;
+
+	}
+	.border-desktop{
+		border: 1px solid #eee;
+		margin-left: 0;
+		margin-right: 0;
+		background-color: #fff;
+		
+	}
+}
+
+.ui-icon-circle-triangle-w {
+    background-position: center !important;
+    transform: rotate(
+180deg
+);
+}
+
+@media (min-width:1024px){
+	.card-detail{
+		padding-top: 2rem;
+	}
+	.payment-detail{
+		padding-bottom: 4rem;
+	}
+}
+@media (min-width:1401px){
+	#erroeplayeriagree{
+		margin-top: 60px !important;
+	}
+}
+@media screen and (max-width:1453px) and (min-width:1401px) {
+	.social-icons {
+		width: 40px;
+	}
+}
+.yellowbackground , .backoptioncolor{
+	background-color: #FFCE33;
+}
+.backoptioncolor:after{
+    left: 85%;
+    top: 26px;
+    width: 10px;
+    height: 25px;
+    border: solid #07153E;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate( 
+45deg
+ );
+    -ms-transform: rotate(45deg);
+    transform: rotate( 
+45deg
+ );
+    position: absolute;
+    content: '';
+}
+.yellowbackground span.caret:after {
+    left: 85%;
+    top: 10px;
+    width: 10px;
+    height: 25px;
+    border: solid #07153E;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate( 
+45deg
+ );
+    -ms-transform: rotate(45deg);
+    transform: rotate( 
+45deg
+ );
+    position: absolute;
+    content: '';
+}
+.yellowbackground .caret img{
+	display: none;
+}
+#producterror{
+	padding-top: .85rem;
+	padding-left: 1rem;
+	
+}
+#erroeiconsent , #errorparentname , #errorparentsign , #erroremailmsg , #erroremailmsg, #errorplayeragreeementdates, #errorparentconactno, #locationerro{
+	position: relative;
+	top:.85rem;
+	color: red;
+} 
+/* select.wpcf7-form-control {
+	padding: 1.55rem !important;
+} */
+@media (min-width:1400px){
+	select.wpcf7-form-control {
+		 padding: 1.55rem !important; 
+	}
+	.off-text-white{
+		font-size: 2.9rem;
+		line-height:4.5rem;
+		color: #fff;
+	}
+	.off-text-yellow{
+		font-size: 2.9rem;
+		line-height:4.5rem;
+		color: #FFCE33;
+	}
+}
+.crnum{
+	width: 69%;
+}
+.border-desktop .crmn, .border-desktop .cryr, .border-desktop .crcv {
+	width: 9%;
+}
+
+.fa-credit-card:before {
+    content: "\f09d";
+    font-size: 2em;
+}
+.page-payment .form-control{
+	padding: .85rem !important;
+	font-size: 1.65rem !important;
+}
+.arrow{
+	padding: .85rem !important;
+	font-size: 1.65rem !important;
+}
+@media (max-width:1300px){
+	.crnum {
+		width: 75%;
+	}
+	.crmn {
+		width: 6%;
+	}
+	.cryr {
+		width: 6%;
+	}
+	.crcv {
+		width: 8%;
+	}
+	.page-payment .form-control {
+		padding: .85rem !important;
+		font-size: 1.2rem !important;
+	}
+	.arrow {
+		padding: .85rem !important;
+		font-size: 1.2rem !important;
+	}	
+	.payment-detail h2, .product-info p{
+		font-size: 1.5rem !important;
+	}
+}
+
+.crcard{
+	padding: 3rem;
+	background-color: #F6F6F6;
+	padding-bottom: 5rem;
+}
+.cricons{
+	padding-top: 2rem;
+}
+@media screen and (max-width:1300px) and (min-width:1024px) {
+	.crnum {
+		width: 66%;
+	}
+}
+.cwithicons span img{
+	width: 50px;
+}
+.ccicons{
+	text-align: right;
+}
+button#updatemappingformsubmit {
+    margin: 20px 0px;
+}
+.carousel-indicators li {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+  }
+  .yellow-text{
+	  color: #FFCE33 !important;
+  }
+  /* #loginform{
+	  max-width: 50%;
+	  border: #07153E;
+	  background-color: #ccc;
+	  margin: 0 auto;
+	  padding: 2rem;
+  } */
+  .rem-anch-tag a{
+	  display: none;
+  }
+  .login-remember input[type="checkbox"]{
+	  height: 20px;
+	  width: 20px;
+  }
+  #loginform br{
+	display: block !important;
+}
+
+.navbar ul li:hover > ul {
+    display: block;
+}
+/* .navbar ul ul {
+    display: none;
+    position: absolute;
+    top: 3em;
+    left: 0;
+    z-index: 99999;
+} */
+.navbar li {
+    position: relative;
+}
+.sub-menu.dropdown-menu{
+	background-color: #FFCE33;
+	box-shadow: none;
+	border: none;
+	text-align: center;
+	color: #07153E !important;
+	min-width: 225px;
+}
+li:hover .sub-menu.dropdown-menu li a{
+
+	color: #07153E !important;
+}
+.sub-menu.dropdown-menu .dropdown-item{
+	padding: 0;
+	border: none;
+	margin-left: 0 !important;
+}
+.sub-menu .dropdown-menu a{
+	color: #07153E;
+	background-color: #FFCE33;
+}
+.cr-indicators{
+	bottom: 100px;
+}
+
+@media (min-width:1360px){
+	.cr-indicators {
+		bottom: 150px;
+	}
+}
+.accordion-img-1 img{
+	width: 77%;
+}
+/* .page-pre-launch-trial .navigation-wrap{
+	display: none;
+} */
+.lheight{
+	padding:1.893rem;
+}
+
+.Cptext { 
+	text-transform: uppercase;
+}
+.form-control.Cptext::-webkit-input-placeholder { /* WebKit browsers */
+text-transform: none !important;
+}
+.form-control.Cptext:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+text-transform: none !important;
+}
+.form-control.Cptext::-moz-placeholder { /* Mozilla Firefox 19+ */
+text-transform: none !important;
+}
+.form-control.Cptext:-ms-input-placeholder { /* Internet Explorer 10+ */
+text-transform: none !important;
+}
+.trail-book .sub-menu{
+	left: -40px;
+}
+.hidedefault{
+	font-size: 1.875rem;
+	color: #07153E;
+}
+.free-section{
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	background-color: #07153E;
+}
+.pre-launch-text p img{
+	margin-right: 1rem;
+}
+
+.off-btn-center{
+	padding-bottom: 3rem;
+}
+.off-btn-center a{
+	font-size: 1.625rem;
+}
+
+.off-btn-center a:hover{
+	border: 1px solid #FFCE33;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(255 206 51 / 25%);
+}
+section.about-content-with-text {
+    padding-top: 11rem;
+}
+.login-remember label , .login-username label , .login-password label{
+	display: none;
+}
+.login-profile-text{
+	max-width: 600px;
+	background-color: #07153E;
+	color: #FFF;
+	font-family: 'Gotham-medium';
+	padding: 2rem;
+}
+.login-profile-text h2{
+	margin-bottom: 0 !important;
+	font-size: 1.875rem;
+}
+.login-page-section .container{
+	max-width: 1457px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.login-profile-text span{
+	margin-right: 1rem;
+}
+input#user_pass{
+	width: 47%;
+}
+input#user_login {
+    width: 47%;
+    float: left;
+    margin-right: 30px;
+}
+.login-submit{
+	text-align: left !important;
+}
+.forget-pass{
+	display:block !important; 
+	color:#707070; 
+	font-size:1.5rem; 
+	text-align:right;
+	margin-right: 4rem;
+}
+@media (max-width:1032px){
+	.rm-padidng h1, .login-profile-text{
+		padding: 1rem !important;
+		font-size: 1.2rem !important;
+		line-height: 2.2rem;
+		
+	}
+	.login-profile-text h2{
+		font-size: 1.2rem;
+		line-height: 2.2rem;
+	}
+	.login-submit input[type="submit"] {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		font-size: 1.2rem;
+		padding-top: .7rem;
+		padding-bottom: .7rem;
+	}
+}
+.top-header{
+	background-color: #FFCE33;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.top-bar {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.btn-trail-button {
+    font-size: 1.688rem;
+    color: #07153E;
+    text-align: center;
+    border: 3px solid #07153E;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-transform: uppercase;
+	border-radius: 0;
+}
+.launching-month, .pre-launch-text {
+    font-size: 1.61rem;
+    display: flex;
+    height: 100%;
+	align-items: center;
+}
+.launching-month p , .pre-launch-text p{
+	margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.pre-launch-text p{
+	font-weight: 700;
+}
+@media (max-width:1825px){
+	.book-trial-button {
+		text-align: center;
+		
+	}
+	.btn-trail-button{
+		font-size: 1.2rem;
+	}
+	.launching-month, .pre-launch-text{
+		font-size: 1.2rem;
+		justify-content: center;
+	}
+}
+@media (max-width:1200px){
+	.launching-month, .pre-launch-text{
+		font-size: .75rem !important;
+		text-align: center;
+		display: block !important;
+	}
+	.btn-trail-button{
+		font-size: .75rem !important;
+	}
+	.launching-month p, .pre-launch-text p{
+		display: block !important;
+		position: relative;
+    top: .5rem;
+	}
+}
+
+@media screen and (max-width:1200px) and (min-width:1024px){
+	.blur-backgrounds {
+		height: 160px;
+	}
+	.blured-text {
+		font-size: 2.3rem;
+	}
+	.page-home .custom-logo-link .custom-logo {
+		height: 120px;
+		width: 100px;
+	}
+	.page-home .custom-logo-link {
+		height: 130px;
+		width: 150px;
+	}
+}
+@media (min-width:1826px){
+	.padding-remove{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.btn-trail-button:hover{
+	color: #07153E;
+}
+.pre-launch-text p a{
+	
+	color: #07153E;
+}
+@media screen and (max-width:1258px) and (min-width:1200px) {
+	.pre-launch-text p , .btn-trail-button{
+		font-size: .75rem !important;
+	}
+
+}
+.pre-launch-text span img{
+	margin-top: -8px;
+    margin-right: .85rem;
+
+}
+@media screen and (max-width:1442px) and (min-width:1400px) {
+	.launching-month, .pre-launch-text , .btn-trail-button {
+		font-size: 1.1rem !important;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media (max-width:1200px) {
+	.pre-launch-text span{
+		display: inline-block;
+	}
+	.pre-launch-text span img{
+		position: relative;
+		margin-top: 0;
+		top: .4rem;
+    	margin-right: .5rem;
+	}
+	
+}
+.pre-launch-text span p a{
+	border-bottom: 3px solid #07153E;
+	padding-bottom: .4rem;
+	text-decoration: none;
+}
+.off-text-yellow p{
+	border-bottom: 3px solid #FFCE33;
+	padding-bottom: .4rem;
+	display: inline;
+}
+.off-text-yellow p a{
+	color: #FFCE33;
+}
